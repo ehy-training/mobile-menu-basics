@@ -1,5 +1,7 @@
 # Mobil-Menü Grundlagen
-In wenigen Schritten zum funktionierenden Mobil-Menü
+In wenigen Schritten zum funktionierenden Mobil-Menü. 
+
+Hier geht's zum dazugehörigen YouTube Video: https://youtu.be/6wnMtCkJHlg
 
 ---
 
