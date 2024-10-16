@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menü mit JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <style>
+        /*---------------------
+        LAYOUT
+        ---------------------*/
+
+        header,
+        nav.main-nav,
+        section {
+            padding-top: 55px;
+        }
+
+        /*---------------------
+        NAVIGATION
+        ---------------------*/
+
+        /**-----
+        Allgemein
+        -----**/
+        nav a {
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav {
+            background: #000;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: rgb(255, 128, 0);
+        }
+
+
+
+        /**-----
+        Mobil
+        -----**/
+
+        nav.main-nav {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            width: 100%;
+            padding: 0.3em 0;
+        }
+
+        nav.main-nav a {
+            display: inline-block;
+            width: 100%;
+            font-size: 1.5em;
+        }
+
+        .burger-icon-container {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            width: 100%;
+            background: #000;
+            text-align: right;
+        }
+
+        .burger-icon-container,
+        nav.main-nav>div>ul>li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav.main-nav>div>ul>li:last-child {
+            border: none;
+        }
+
+        .burger-icon {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        .burger-icon>div {
+            width: 40px;
+            height: 8px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            background: #fff;
+        }
+        
+        nav.main-nav a {
+            display: inline;
+        }
+
+        .burger-icon>div:nth-child(3) {
+            margin-bottom: 0;
+        }
+
+
+
+        /**-----
+        Desktop
+        -----**/
+
+
+
+        @media only screen and (min-width: 580px) {
+
+            nav.main-nav {
+                display: block;
+                position: sticky;
+                top: 0;
+                width: 100%;
+            }
+
+            .burger-icon-container {
+                display: none;
+            }
+
+            nav.main-nav .container {
+                padding-top: 0.3em;
+                padding-bottom: 0.3em;
+            }
+
+            nav.main-nav .container>ul {
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 1em;
+                margin: 0;
+            }
+
+            nav.main-nav>div>ul>li {
+                border: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Mobile Overlay Menü mit JavaScript</h1>
+        </div>
+    </header>
+
+    <nav id="burger-icon-container" class="burger-icon-container">
+        <div id="burger-icon" class="burger-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <nav id="main-nav" class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">Top</a></li>
+                <li><a href="#section-01">Abschnitt 1</a></li>
+                <li><a href="#section-02">Abschnitt 2</a></li>
+                <li><a href="#section-03">Abschnitt 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="section-01">
+                <h2>Abschnitt 1</h2>
+
+                <p>
+                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                </p>
+                <p>
+                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+                </p>
+                <p>
+                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                </p>
+                <p>
+                    Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden.
+                </p>
+                <p>
+                    Nichteinhaltung wird mit bis zu 245 € oder 368 $ bestraft. Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten.
+                </p>
+                <p>
+                    Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt werden.
+                </p>
+            </section>
+
+            <section id="section-02">
+                <h2>Abschnitt 2</h2>
+
+                <p>
+                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                </p>
+                <p>
+                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+                </p>
+                <p>
+                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                </p>
+                <p>
+                    Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden.
+                </p>
+                <p>
+                    Nichteinhaltung wird mit bis zu 245 € oder 368 $ bestraft. Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten.
+                </p>
+                <p>
+                    Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt werden.
+                </p>
+            </section>
+
+            <section id="section-03">
+                <h2>Abschnitt 3</h2>
+
+                <p>
+                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+                </p>
+                <p>
+                    Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+                </p>
+                <p>
+                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus.
+                </p>
+                <p>
+                    Quod erat demonstrandum. Seit 1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86 der Texte zur Pflicht werden.
+                </p>
+                <p>
+                    Nichteinhaltung wird mit bis zu 245 € oder 368 $ bestraft. Genauso wichtig in sind mittlerweile auch Âçcèñtë, die in neueren Schriften aber fast immer enthalten sind. Ein wichtiges aber schwierig zu integrierendes Feld sind OpenType-Funktionalitäten.
+                </p>
+                <p>
+                    Je nach Software und Voreinstellungen können eingebaute Kapitälchen, Kerning oder Ligaturen (sehr pfiffig) nicht richtig dargestellt werden.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Enno Hyttrek</p>
+            <p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"></a>GNU General Public License GLPv3</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Funktionen
+    </script>
+
+</body></html>
+
