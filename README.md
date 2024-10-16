@@ -56,3 +56,27 @@ Da die JavaScript-Funktionalität zur Steuerung des Menüs noch fehlt, wird das 
 
 ### Nächster Schritt:
 Hinzufügen der JavaScript Funktionalität
+
+---
+
+## Schritt 2
+
+Der JavaScript-Code steuert das Verhalten des Menüs auf mobilen Geräten und passt sich an unterschiedliche Bildschirmgrößen an. Folgende Funktionen werden implementiert:
+
+- **Event-Listener für das Burger-Icon**: 
+  Der Code überwacht das **Burger-Icon** und reagiert auf Klicks. Der `click`-Event-Listener auf dem `burger-icon`-Element führt eine Funktion aus, die das Menü öffnet oder schließt, jedoch nur, wenn der Viewport kleiner als 580px ist. Dies wird durch die Überprüfung `if (window.innerWidth <= 580)` gesteuert. 
+  - Wenn das Menü geschlossen ist (`display: none`), wird es geöffnet (`display: block`).
+  - Zusätzlich wird bei jedem Öffnen des Menüs das `padding-top` auf **55px** gesetzt und die Links innerhalb des Menüs (`nav.main-nav a`) erhalten `display: inline-block`, um die Darstellung zu verbessern.
+
+- **Event-Listener für Links im Menü (Mobilansicht)**:
+  Der Code fügt jedem **Link** im Menü (`nav.main-nav a`) einen `click`-Event-Listener hinzu, der das Menü wieder schließt, wenn ein Link angeklickt wird, aber nur in der Mobilansicht. Dies wird durch die Bedingung `if (window.innerWidth <= 580)` gesteuert, die sicherstellt, dass diese Funktion nur auf kleinen Bildschirmen ausgeführt wird. Auf größeren Bildschirmen (über 580px) bleibt das Menü immer sichtbar.
+
+- **Resize-Event zur Anpassung an Bildschirmgrößen**:
+  Ein `resize`-Event-Listener sorgt dafür, dass das Menü korrekt auf Bildschirmgrößenänderungen reagiert. Wenn der Viewport größer als 580px wird, setzt der Code sicher, dass das Menü immer sichtbar ist (`display: block`), auch wenn es vorher durch das JavaScript ausgeblendet wurde. Zusätzlich wird in diesem Fall das `padding-top` auf **0.3em** gesetzt, um die gewünschte Darstellung im Desktop-Modus zu gewährleisten. Wenn der Viewport kleiner als 580px ist, wird das Menü wieder ausgeblendet, bis es durch das Burger-Icon geöffnet wird.
+
+**Zusammenfassung der wichtigsten JavaScript-Komponenten**:
+1. **`burger-icon` Click-Event**: Öffnet und schließt das Menü in der Mobilansicht.
+2. **`nav.main-nav a` Click-Event**: Schließt das Menü automatisch, wenn ein Link angeklickt wird (nur in der Mobilansicht).
+3. **`resize`-Event**: Stellt sicher, dass das Menü bei Viewports über 580px immer sichtbar ist und das korrekte `padding-top` verwendet wird.
+
+Dieser JavaScript-Code sorgt dafür, dass das Menü in der Mobilansicht ein- und ausgeblendet wird, während es in der Desktopansicht immer sichtbar und korrekt positioniert ist.
