@@ -1,6 +1,8 @@
 # Mobil-Menü Grundlagen
 In wenigen Schritten zum funktionierenden Mobil-Menü. 
 
+Hier der Link zur Seite unter GitHub Pages: https://ehy-training.github.io/mobile-menu-basics/
+
 Hier geht's zum dazugehörigen YouTube Video: https://youtu.be/6wnMtCkJHlg
 
 ---

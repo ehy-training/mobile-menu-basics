@@ -42,9 +42,7 @@
             color: #fff;
         }
 
-        nav a:hover {
-            color: rgb(255, 128, 0);
-        }
+
 
 
 
@@ -77,11 +75,11 @@
         }
 
         .burger-icon-container,
-        nav.main-nav>div>ul>li {
+        nav.main-nav>ul>li {
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        nav.main-nav>div>ul>li:last-child {
+        nav.main-nav>ul>li:last-child {
             border: none;
         }
 
@@ -97,7 +95,7 @@
             border-radius: 4px;
             background: #fff;
         }
-
+        
         nav.main-nav a {
             display: inline;
         }
@@ -132,14 +130,13 @@
                 padding-bottom: 0.3em;
             }
 
-            nav.main-nav .container>ul {
+            nav.main-nav > ul {
                 display: flex;
                 flex-wrap: wrap;
                 grid-gap: 1em;
-                margin: 0;
             }
 
-            nav.main-nav>div>ul>li {
+            nav.main-nav>ul>li {
                 border: none;
             }
 
@@ -152,6 +149,7 @@
     <header>
         <div class="container">
             <h1>Mobile Overlay Menü mit JavaScript</h1>
+            <p>JavaScript Umsetzung</p>
         </div>
     </header>
 
@@ -164,14 +162,15 @@
     </nav>
 
     <nav id="main-nav" class="main-nav">
-        <div class="container">
-            <ul>
+            <ul class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mobile-menu-js-01.html">Aufbau HTML und CSS</a></li>
+                <li class="current"><a href="mobile-menu-js-02.html">Javascript Umsetzung</a></li>
                 <li><a href="#">Top</a></li>
                 <li><a href="#section-01">Abschnitt 1</a></li>
                 <li><a href="#section-02">Abschnitt 2</a></li>
                 <li><a href="#section-03">Abschnitt 3</a></li>
             </ul>
-        </div>
     </nav>
 
     <main>

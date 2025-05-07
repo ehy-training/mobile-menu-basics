@@ -1,10 +1,11 @@
 /*---------------------
-General Styles for Mobile Menu Basics
-© 2024 Enno Hyttrek
+General Styles and Script for Mobile Menu Basics with JavaScript
+Author: Enno Hyttrek
 ehy.training@gmail.com
 https://ennohyttrek.de
 
 GNU General Public License GLPv3
+Version: 1.1.0
 ---------------------*/
 
 
@@ -41,7 +42,7 @@ figure {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 75em;
     margin: 0 auto;
     padding: 1em 8px;
 }
@@ -80,3 +81,9 @@ COLOR & STYLE
 footer {
     border-top: 1px solid rgba(0,0,0,0.3);
 }
+
+nav a:hover,
+nav li.current a {
+    color: rgb(255, 128, 0);
+}
+
